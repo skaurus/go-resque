@@ -10,7 +10,7 @@ Differences from the original are:
 - it is a Go module
 - travis config is updated to use newer Go versions
 - all drivers except one removed
-- this driver is [go-redis](https://github.com/go-redis/redis) v9
+- this driver is [go-redis](https://github.com/redis/go-redis) v9
 - driver update required changes in some signatures to include context.Context
 - also, in newer Redis versions some commands are deprecated, and I used suggested replacements (namely, ZRANGE instead of ZRANGEBYSCORE)
 
@@ -44,7 +44,7 @@ package main
 import (
 	"context"
 
-	"github.com/go-redis/redis/v9"            // Redis client from go-redis package
+	"github.com/redis/go-redis/v9"            // Redis client from go-redis package
 	"github.com/skaurus/go-resque"            // Import this package
 	_ "github.com/skaurus/go-resque/redis.v9" // Use go-redis v9
 )
